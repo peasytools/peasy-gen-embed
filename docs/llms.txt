@@ -1,21 +1,52 @@
 # PeasyGen Embed Widget
 
-> Embeddable PeasyGen widgets for any website. Zero dependencies, Shadow DOM isolation, 4 themes (light/dark/sepia/auto).
+> File conversion tools. Embeddable widgets for any website. Zero dependencies, Shadow DOM isolation.
 
 ## Quick Start
 
-Add to any HTML page:
-- Script: <script src="https://cdn.jsdelivr.net/npm/peasy-gen-embed@1/dist/embed.min.js"></script>
+```html
+<script src="https://cdn.jsdelivr.net/npm/peasy-gen-embed@1/dist/embed.min.js"></script>
+<div data-peasygen="format" data-slug="example"></div>
+```
+
+## Available Widget Types (8)
+
+- format: `data-peasygen="format"`
+- tool: `data-peasygen="tool"`
+- convert: `data-peasygen="convert"`
+- compare: `data-peasygen="compare"`
+- glossary: `data-peasygen="glossary"`
+- gallery: `data-peasygen="gallery"`
+- guide: `data-peasygen="guide"`
+- search: `data-peasygen="search"`
+
+## Customization
+
+- **Themes**: light, dark, sepia, auto (follows system preference)
+- **Sizes**: compact (280px), default (420px), large (720px)
+- **Styles**: modern, classic
+
+```html
+<div data-peasygen="format" data-slug="example"
+     data-theme="auto" data-size="compact" data-style-variant="modern"></div>
+```
+
+## Integration Methods
+
+1. **Script tag** (recommended): `<script src="https://cdn.jsdelivr.net/npm/peasy-gen-embed@1/dist/embed.min.js"></script>`
+2. **iframe**: `https://peasygen.com/iframe/entity/{slug}/`
+3. **oEmbed**: `https://peasygen.com/oembed?url={page_url}&format=json`
+4. **Badge**: `https://peasygen.com/badge/site.svg`
 
 ## Links
 
 - Main site: https://peasygen.com
 - Widget docs: https://widget.peasygen.com
-- npm: https://www.npmjs.com/package/peasy-gen-embed
-- GitHub: https://github.com/peasytools/peasy-gen-embed
-- API: https://peasygen.com/developers/
+- API documentation: https://peasygen.com/developers/
+- npm package: https://www.npmjs.com/package/peasy-gen-embed
+- GitHub: https://github.com/fyipedia/peasy-gen-embed
 
-## Peasy Tools Widget Family
+## Peasy Tools Widget Network
 
 - [PeasyTools Widget](https://widget.peasytools.com)
 - [PeasyPDF Widget](https://widget.peasypdf.com)
